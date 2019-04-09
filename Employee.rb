@@ -30,14 +30,12 @@ class Employee
         @balance = @balance -  (( 20 - @absence) * ( @balance / 30 )) 
     end
     def check
-       
-        p "#{@name} has a #{@level} , and absent:#{@absence} , And delay : #{@late} Once , This is equal #{(@late/3).truncate} And then became a salary #{@balance}" 
-    
+        p "#{@name} has a #{@level} , and absent:#{20 -@absence } , And delay : #{@late} Once , This is equal #{(@late/3).truncate} absent add ,  And then became a salary #{@balance}" 
     end 
 end
 ahmed = Employee.new("ahmed" , "level 2")
 ahmed.absent(1)
-ahmed.late(0)
+ahmed.late(5)
 ahmed.add_balance
 ahmed.check
 khalid = Employee.new("khalid" , "level 3")
