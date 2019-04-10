@@ -10,15 +10,18 @@ class Employee
         @lates_count = 0
         @absence_account = 20
         @single_day_wage = 0
+        @late_day=0
     end
     def absent
         @absence_account = @absence_account - 1
         # @absent_day =  @absent_day  + 1
     end
     def late
+        @late_day= @late_day + 1
         @lates_count =  @lates_count + 1
         if @lates_count == 3
             @absence_account = @absence_account - 1
+            @lates_count = 0
             # @vac_days = @vac_days - 1
             end
     end
@@ -39,7 +42,7 @@ class Employee
     p "The employee name is : #{@name}"
     p "The level is : #{@level}"
     p "The number of days left in his absence account : #{@absence_account} days"
-    p "The number of times he was late : #{@lates_count} times"
+    p "The number of times he was late : #{@late_day} times"
     p "The money balance is : #{@money_balance} SR"
     end
 end
