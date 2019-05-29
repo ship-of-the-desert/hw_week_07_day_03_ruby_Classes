@@ -18,14 +18,14 @@ class Employee
         end
     end
     def add_balance 
-        if (@level=="level 1")
-            @balance =  2000
-        elsif (@level=="level 2")
-            @balance =  4000
-        elsif (@level=="level 3")
-            @balance =  6000
-        else 
-        @balance = 0
+        if (@level=="level 1") 
+            @balance =  2000 
+        elsif (@level=="level 2") 
+             @balance =  4000 
+        elsif (@level=="level 3")  
+            @balance =  6000 
+        else  
+            @balance = 0
         end 
         @balance = @balance -  (( 20 - @absence) * ( @balance / 30 )) 
     end
